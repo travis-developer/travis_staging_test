@@ -1,4 +1,5 @@
-language: elixir
+language: ruby
+sudo: false
 
-otp_release:
-  - '17.3'
+notifications:
+  webhooks: http://requestb.in/1ja2u801
