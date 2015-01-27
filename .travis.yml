@@ -4,10 +4,9 @@ install: "sudo pip install -r requirements.txt --use-mirrors"
 
 group: dev
 
-addons:
-  postgresql: "${PG_VERSION}"
-
 before_script:
+  - sudo service postgresql stop
+  - sudo service postgresql start $PG_VERSION
   - psql -c 'create database travis_postgis;' -U postgres
   - psql -f init_postgis.sql -U postgres -d travis_postgis
   - psql -f test_data.sql -U postgres -d travis_postgis
@@ -16,5 +15,6 @@ script: nosetests --verbose
 
 env:
   - PG_VERSION=9.1
-#  - PG_VERSION=9.4
+#  - PG_VERSION=9.2
 #  - PG_VERSION=9.3
+  - PG_VERSION=9.4
