@@ -9,7 +9,6 @@ before_script:
   - sudo service postgresql start $PG_VERSION
   - psql -c 'create database travis_postgis;' -U postgres
   - psql -f init_postgis.sql -U postgres -d travis_postgis
-  - psql -c 'SELECT PostGIS_version();' -U postgres -d travis_postgis
   - psql -f test_data.sql -U postgres -d travis_postgis
 
 script: nosetests --verbose
