@@ -1,6 +1,17 @@
-language: ruby
+language: python # not sure if only ruby/default is on staging though
+
+python: "2.7"
+
+install: "pip install -r requirements.txt --use-mirrors"
 
 group: dev
 
 addons:
   postgresql: "9.4"
+
+before_script:
+  - psql -c 'create database travis_postgis;' -U postgres
+  - psql -f init_postgis.sql -U postgres -d travis_postgis
+  - psql -f test_data.sql -U postgres -d travis_postgis
+
+script: nosetests --verbose
