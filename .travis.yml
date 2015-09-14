@@ -1,4 +1,5 @@
 language: ruby
+
 sudo: false
 
 install:
@@ -7,11 +8,8 @@ install:
 script:
   - true
 
-deploy:
-  - provider: s3
-    access_key_id: "YOUR AWS ACCESS KEY"
-    secret_access_key: "YOUR AWS SECRET KEY"
-    bucket: "S3 Bucket"
-    skip_cleanup: true
-  - provider: heroku
-    foo: bar
+notifications:
+  irc:
+    channels:
+      - "chat.freenode.net#travisstaging"
+      - secure: "kHjfGONwZsQBFaXJMkHt69EEy6f7jBZXLR9PFt+93pLyCvii48/gHgQ59jaati/XrVr8TklV5B77eaL9FXYa3GmMaRdN/3sNtFQ4K71lIVRvakG0nVZjpU4YGkd+gQu+F2Cx7b6qQYuIPRlbNy+hufx05PxEvggno0k5ftLn1J8="
