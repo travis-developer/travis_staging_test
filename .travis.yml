@@ -9,6 +9,6 @@ script:
   - true
 
 notifications:
-  irc:
-    channels:
+  hipchgat:
+    rooms:
       - "chat.freenode.net#travisstaging"
