@@ -12,4 +12,3 @@ notifications:
   irc:
     channels:
       - "chat.freenode.net#travisstaging"
-      - secure: "kHjfGONwZsQBFaXJMkHt69EEy6f7jBZXLR9PFt+93pLyCvii48/gHgQ59jaati/XrVr8TklV5B77eaL9FXYa3GmMaRdN/3sNtFQ4K71lIVRvakG0nVZjpU4YGkd+gQu+F2Cx7b6qQYuIPRlbNy+hufx05PxEvggno0k5ftLn1J8="
