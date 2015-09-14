@@ -16,3 +16,6 @@ notifications:
   hipchat:
     rooms:
       - secure: "VTDNsa+35yCJ3tKHb1stlCuy7dCByprOHpDksH0DST5bN4109I7m4hh8xEYYODkYY1q4Z089XiJnCbtdLyQ571j2EDTLwGUIZbLIGwwMzCW767C8ARy51mtmuSZ4G9JJOzTqBE4qRRubB8zcFK1UXwRhdu8xDEDFeGaeLe+/W80="
+  slack:
+    rooms:
+      - secure: "VTDNsa+35yCJ3tKHb1stlCuy7dCByprOHpDksH0DST5bN4109I7m4hh8xEYYODkYY1q4Z089XiJnCbtdLyQ571j2EDTLwGUIZbLIGwwMzCW767C8ARy51mtmuSZ4G9JJOzTqBE4qRRubB8zcFK1UXwRhdu8xDEDFeGaeLe+/W80="
