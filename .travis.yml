@@ -8,10 +8,6 @@ notifications:
   irc:
     channels:
     - secure: "OwTCZyaqr4b2e18+FVQCIqp9dfZV+PEZG9vWTKwVLgfkxIy13iIn9u/QQezTH7W4DSDM2wf6slb8DLRb4W76yQ8f0LKPifMDFhf0OIT8WQQlX+9FIJ3xcu2A2udzfrpiQMjnFxP9rElQD3H8EQsM+vs5PVlog4LDGT0RWUYPB5o="
-    - chat.freenode.net#travisstaging
-  hipchat:
-    rooms:
-    - secure: "OwTCZyaqr4b2e18+FVQCIqp9dfZV+PEZG9vWTKwVLgfkxIy13iIn9u/QQezTH7W4DSDM2wf6slb8DLRb4W76yQ8f0LKPifMDFhf0OIT8WQQlX+9FIJ3xcu2A2udzfrpiQMjnFxP9rElQD3H8EQsM+vs5PVlog4LDGT0RWUYPB5o="
   slack:
     rooms:
       secure: Up8n2ykczUuGXBmXmFG3qnvQkBuM4jq42HKdvAVgiV7fTWy/5wSWIIvas+D+hV/hLUPOgwjS9HX/fsEv9cZ3GIv4jroLn4w9fh23J/UYxipix/z5Ego5GVw/V4Nm4GhcELgjfsAuTp5HRPJTRYFpO/aPcq8tFYEL1Q07xmv8VnI=
