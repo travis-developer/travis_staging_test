@@ -9,11 +9,8 @@ notifications:
     channels:
     - secure: "OwTCZyaqr4b2e18+FVQCIqp9dfZV+PEZG9vWTKwVLgfkxIy13iIn9u/QQezTH7W4DSDM2wf6slb8DLRb4W76yQ8f0LKPifMDFhf0OIT8WQQlX+9FIJ3xcu2A2udzfrpiQMjnFxP9rElQD3H8EQsM+vs5PVlog4LDGT0RWUYPB5o="
     nick:
-    - secure: "YVpqcmaxsCYc6iOv5h3TwQhCby3oRa10E0TLOSoWBFQxeIw4xqAj+yA0JTO7OD9PciUUY/rULuhK5AuSoye0lQALpWIvrxskmKVXeGtQcVbMYwY9UjZCj8Rak5M9ovstFCBltLwTBkJcSC2xQmbnbVEVOefm7l7+M9q8byJDaKg="
+      secure: "YVpqcmaxsCYc6iOv5h3TwQhCby3oRa10E0TLOSoWBFQxeIw4xqAj+yA0JTO7OD9PciUUY/rULuhK5AuSoye0lQALpWIvrxskmKVXeGtQcVbMYwY9UjZCj8Rak5M9ovstFCBltLwTBkJcSC2xQmbnbVEVOefm7l7+M9q8byJDaKg="
     password:
-    - secure: "BgMs8NKcv8p7Lw1jpMrpjACSh+bUznqucTa2Ol6Wr2Sc85RvQ8W4XQ8PGl7Ko8WwC8VTZAls708lFmt3DUq8mL8DyLDfSGS1V6UNE0FUfwVbns/egtQ5pqvm+Tlwazfxud8/tIE4ePx35d89BQWobHBdqyzRXCZ8ikv9fpnBxVc="
+      secure: "BgMs8NKcv8p7Lw1jpMrpjACSh+bUznqucTa2Ol6Wr2Sc85RvQ8W4XQ8PGl7Ko8WwC8VTZAls708lFmt3DUq8mL8DyLDfSGS1V6UNE0FUfwVbns/egtQ5pqvm+Tlwazfxud8/tIE4ePx35d89BQWobHBdqyzRXCZ8ikv9fpnBxVc="
     nickserv_password:
-    - secure: "oKNhDjGFpAIuaxKnk+ALeVTo7o2A/OXPb/wTql5BlEJ03d9DoHqaRS4ijkkZ493DlDp/xUYtdc0DYhga+eF5dn+R3cxDIgJ55D1OGYXJFQpC1TOaNbTu0dWHdH53Y7HoWc2HjERg6RhIQVe3XQsa35KXy6lQO/qXPHOrZ4xWFLE="
-  slack:
-    rooms:
-      secure: Up8n2ykczUuGXBmXmFG3qnvQkBuM4jq42HKdvAVgiV7fTWy/5wSWIIvas+D+hV/hLUPOgwjS9HX/fsEv9cZ3GIv4jroLn4w9fh23J/UYxipix/z5Ego5GVw/V4Nm4GhcELgjfsAuTp5HRPJTRYFpO/aPcq8tFYEL1Q07xmv8VnI=
+      secure: "oKNhDjGFpAIuaxKnk+ALeVTo7o2A/OXPb/wTql5BlEJ03d9DoHqaRS4ijkkZ493DlDp/xUYtdc0DYhga+eF5dn+R3cxDIgJ55D1OGYXJFQpC1TOaNbTu0dWHdH53Y7HoWc2HjERg6RhIQVe3XQsa35KXy6lQO/qXPHOrZ4xWFLE="
