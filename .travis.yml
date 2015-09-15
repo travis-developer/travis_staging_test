@@ -1,21 +1,17 @@
 language: ruby
-
 sudo: false
-
 install:
-  - true
-
+- true
 script:
-  - true
-
+- true
 notifications:
   irc:
     channels:
-      - secure: "VTDNsa+35yCJ3tKHb1stlCuy7dCByprOHpDksH0DST5bN4109I7m4hh8xEYYODkYY1q4Z089XiJnCbtdLyQ571j2EDTLwGUIZbLIGwwMzCW767C8ARy51mtmuSZ4G9JJOzTqBE4qRRubB8zcFK1UXwRhdu8xDEDFeGaeLe+/W80="
-      - "chat.freenode.net#travisstaging"
+    - secure: VTDNsa+35yCJ3tKHb1stlCuy7dCByprOHpDksH0DST5bN4109I7m4hh8xEYYODkYY1q4Z089XiJnCbtdLyQ571j2EDTLwGUIZbLIGwwMzCW767C8ARy51mtmuSZ4G9JJOzTqBE4qRRubB8zcFK1UXwRhdu8xDEDFeGaeLe+/W80=
+    - chat.freenode.net#travisstaging
   hipchat:
     rooms:
-      - secure: "VTDNsa+35yCJ3tKHb1stlCuy7dCByprOHpDksH0DST5bN4109I7m4hh8xEYYODkYY1q4Z089XiJnCbtdLyQ571j2EDTLwGUIZbLIGwwMzCW767C8ARy51mtmuSZ4G9JJOzTqBE4qRRubB8zcFK1UXwRhdu8xDEDFeGaeLe+/W80="
+    - secure: VTDNsa+35yCJ3tKHb1stlCuy7dCByprOHpDksH0DST5bN4109I7m4hh8xEYYODkYY1q4Z089XiJnCbtdLyQ571j2EDTLwGUIZbLIGwwMzCW767C8ARy51mtmuSZ4G9JJOzTqBE4qRRubB8zcFK1UXwRhdu8xDEDFeGaeLe+/W80=
   slack:
     rooms:
-      - secure: "Z/ZFcShXtT3phAIMqymWixKdsFplnCvSoXqJSznPy3OAzMdq5Dc8cU2CVSEjhmmmR/AyGMg7ELhiK1ZMMBhHi/3oMsWt4VEiYi/C4aIkCu7MRFbXV55D2RHcotZsjH1cHpH46RbQ/nQe/3sSM6gu96gA9GC5FDe4kEg0VzTEksQ="
+      secure: XTDB0Cu21PwFA2cA5HpTi5IP2rW6F13MXm3CzB2pDbAIkSGg74YpLG6/TupEYvtoz+6D8XDheU/kEwM+CzWaOh1O7jx90exW92IK53o8Klj7AA/xny4zKM0mrlo227ndu76UPohWGmp8fZh/I2uFZUwW6ECPX2AQiF0tVJ7v8I8=
