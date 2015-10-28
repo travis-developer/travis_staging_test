@@ -2,11 +2,21 @@ language: ruby
 
 sudo: false
 
+addons:
+  apt:
+    sources:
+      - elasticsearch-1.7
+    packages:
+      - elasticsearch
+services:
+  - elasticsearch
+
+before_install:
+  - sleep 10
+
 install: true
 
 script:
-  - true
-
-cache:
-  bundler: true
-  feature: true
+  - cat ~/apt-get-update.log
+  - elasticsearch -v
+  - curl http://localhost:9200/
