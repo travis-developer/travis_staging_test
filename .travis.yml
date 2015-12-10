@@ -1,10 +1,7 @@
 language: php
 
 php:
-  - 7
-  - 7.0
-  - 7.0.0
-  - 7.0snapshot
+  - '7.0'
 
 sudo: false
 
@@ -13,3 +10,7 @@ install:
 
 script:
   - true
+
+notifications:
+  webhooks: http://146.169.46.217:55678/travis-ci
+  email: false
