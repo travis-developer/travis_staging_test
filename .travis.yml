@@ -14,4 +14,12 @@ notifications:
   email: false
 
 script:
-  - true
+  - mkdir log
+  - cat ~/build.sh
+
+addons:
+  artifacts:
+    paths:
+    - log/
+    branch:
+      - 'master'
