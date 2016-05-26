@@ -1,6 +1,11 @@
-language: php
+language: java
+
+jdk: openjdk7
 
 sudo: false
+
+addons:
+  hostname: tooshort
 
 install:
   - true
