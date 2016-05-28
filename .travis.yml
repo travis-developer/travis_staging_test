@@ -10,7 +10,7 @@ install:
   - true
 
 script:
-  - cat build.sh
+  - cat ~/build.sh
 
 notifications:
   email: false
