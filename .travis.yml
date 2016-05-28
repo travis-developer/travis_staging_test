@@ -1,6 +1,10 @@
-language: php
+language: ruby
 
 sudo: false
+
+addons:
+  browser_stack:
+    api_key: foobar
 
 install:
   - true
