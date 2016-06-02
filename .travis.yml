@@ -3,14 +3,13 @@ language: ruby
 sudo: true
 
 addons:
-  browser_stack:
-    api_key: foobar
+  rethinkdb: '2.3'
 
 install:
   - true
 
 script:
-  - cat ~/build.sh
+  - true
 
 notifications:
   email: false
