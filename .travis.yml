@@ -1,11 +1,15 @@
-language: ruby
+language: cpp
 
-sudo: false
+compiler: clang
+
+sudo: required
 
 addons:
-  sauce_connect:
-    username: username
-    access_key: access_key
+  apt:
+    sources:
+      - 'ppa:h-rayflood/llvm'
+    packages:
+      - clang-3.6
 
 install:
   - true
