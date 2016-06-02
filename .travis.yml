@@ -3,7 +3,9 @@ language: ruby
 sudo: false
 
 addons:
-  rethinkdb: '2.3'
+  sauce_connect:
+    username: username
+    access_key: access_key
 
 install:
   - true
