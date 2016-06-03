@@ -5,7 +5,7 @@ sudo: false
 env:
   matrix:
     # The first one is intentionally empty in order to run without any extra env vars
-    -
+    - FOO=BAR
 
 rvm:
   - 2.3.0
