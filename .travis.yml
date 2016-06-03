@@ -10,10 +10,11 @@ env:
 
 rvm:
   - 2.3.0
+
 matrix:
-  allow_failures:
-    # Testing edge is nice, but it probably shouldn't kill the build
-    - gemfile: gemfiles/Gemfile.sinatra-edge
+  include:
+    - rvm: 2.3.0
+      gemfile: gemfiles/Gemfile.sinatra-edge
 
 install:
   - true
