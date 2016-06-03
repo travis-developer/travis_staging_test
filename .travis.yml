@@ -12,7 +12,7 @@ rvm:
 
 matrix:
   include:
-    - sudo: required
+    - rvm: 2.3.0
 
 install:
   - true
