@@ -8,7 +8,7 @@ env:
     -
 matrix:
   include:
-    - env: FOO=BAR
+    - rvm: default
 
 install:
   - true
