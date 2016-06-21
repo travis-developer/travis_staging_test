@@ -1,6 +1,6 @@
 language: ruby
 
-sudo: false
+sudo: required
 
 addons:
   rethinkdb: '2.3'
