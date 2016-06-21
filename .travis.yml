@@ -1,8 +1,12 @@
-language: elixir
+language: ruby
 
-elixir: '1.3.0-rc.0'
+sudo: false
 
-sudo: required
+addons:
+  rethinkdb: '2.3'
+
+install:
+  - true
 
 script:
   - true
