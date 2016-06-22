@@ -16,7 +16,7 @@ deploy:
   api_key:
     secure: FOOBAR
   environment:
-    master: staging
+    default: staging
   app: myapp1
 
 notifications:
