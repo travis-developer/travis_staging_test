@@ -2,14 +2,22 @@ language: ruby
 
 sudo: false
 
-addons:
-  rethinkdb: '2.3'
-
 install:
   - true
 
 script:
   - true
+
+notifications:
+  email: false
+
+deploy:
+  provider: engineyard
+  api_key:
+    secure: FOOBAR
+  environment:
+    master: staging
+  app: myapp1
 
 notifications:
   email: false
