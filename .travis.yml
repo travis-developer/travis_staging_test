@@ -6,18 +6,16 @@ install:
   - true
 
 script:
-  - cat ~/build.sh
+  - true
 
 notifications:
   email: false
 
-deploy:
-  provider: engineyard
-  api_key:
-    secure: FOOBAR
-  environment:
-    default: staging
-  app: myapp1
+addons:
+  browserstack:
+    username: browserstackrunn1
+    access_key: foobar
+
 
 notifications:
   email: false
