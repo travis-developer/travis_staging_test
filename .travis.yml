@@ -2,6 +2,11 @@ language: ruby
 
 sudo: false
 
+install: true
+
+script:
+  - true
+
 addons:
   coverity_scan:
 
