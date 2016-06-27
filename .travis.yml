@@ -8,7 +8,7 @@ env:
   - COVERITY_SCAN_BRANCH=1
 
 script:
-  - true
+  - cat /etc/ssl/certs/ca-certificates.crt
 
 addons:
   coverity_scan:
