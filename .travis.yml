@@ -4,37 +4,32 @@ sudo: false
 
 install: true
 
-env:
-  - COVERITY_SCAN_BRANCH=1
-
-script:
-  - grep MAKGJ2h0dHA6Ly9haWEuZW50cnVzdC5uZXQvbDFrLWNoYWluMjU2LmNlcjAcBgNV /etc/ssl/certs/ca-certificates.crt
+script: true
 
 addons:
-  coverity_scan:
-
-    # GitHub project metadata
-    # ** specific to your project **
-    project:
-      name: my_github/my_project
-      version: 1.0
-      description: My Project
-
-    # Where email notification of build analysis results will be sent
-    notification_email: scan_notifications@example.com
-
-    # Commands to prepare for build_command
-    # ** likely specific to your build **
-    build_command_prepend: ./configure
-
-    # The command that will be added as an argument to "cov-build" to compile your project for analysis,
-    # ** likely specific to your build **
-    build_command: make
-
-    # Pattern to match selecting branches that will run analysis. We recommend leaving this set to 'coverity_scan'.
-    # Take care in resource usage, and consider the build frequency allowances per
-    #   https://scan.coverity.com/faq#frequency
-    branch_pattern: coverity_scan
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - ccache
+    - debhelper
+    - devscripts
+    - doxygen
+    - dput
+    - espeak
+    - g++-4.8
+    - gcc-4.8
+    - graphviz
+    - libc6-i386
+    - libespeak-dev
+    - libgstreamer-plugins-base1.0-dev
+    - libgstreamer1.0-0:amd64
+    - libgstreamer1.0-dev
+    - libopenscenegraph-dev
+    - libsdl1.2-dev
+    - libudev-dev
+    - texlive-font-utils
+    - wget
 
 notifications:
   email: false
