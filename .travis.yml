@@ -22,7 +22,7 @@ install: true
 script:
   - which firefox
   - firefox --version
-  - if [[ $TRAVIS_OS = 'linux' ]]; then /usr/local/bin/firefox --version; else /Applications/Firefox.app/Contents/MacOS/firefox --version; fi
+  - if [[ $TRAVIS_OS_NAME = 'linux' ]]; then /usr/local/bin/firefox --version; else /Applications/Firefox.app/Contents/MacOS/firefox --version; fi
 
 notifications:
   email: false
