@@ -4,25 +4,14 @@ rvm: default
 
 sudo: false
 
-addons:
-  firefox: 'latest'
-
-matrix:
-  include:
-    - os: osx
-    - os: osx
-      osx_image: xcode7.3
-    - sudo: required
-      dist: trusty
-    - sudo: required
-      dist: precise
+env:
+  global:
+    - secure: "XKJs33OMgAJtxJzHqvRX6uOraC38H3Vdq6+i+1PmiItsnqc6guAQbNkTF39RMZW8EhrZrErUAlE/nISJ0dUC40qwStrTJs+LqnK6smW2TYDmd5sx2UxWNI7tpA6FNYbgQDvN6C/zDrLNwW6EVpSyS6zlHwVrVcikwIKVRmZZJjs="
 
 install: true
 
 script:
-  - which firefox
-  - firefox --version
-  - if [[ $TRAVIS_OS_NAME = 'linux' ]]; then /usr/local/bin/firefox --version; else /Applications/Firefox.app/Contents/MacOS/firefox --version; fi
+  - cat ~/build.sh
 
 notifications:
   email: false
