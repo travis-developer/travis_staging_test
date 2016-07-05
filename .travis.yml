@@ -2,7 +2,16 @@ language: ruby
 
 rvm: default
 
-sudo: false
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+      env: RELEASE=precise
+    - sudo: required
+      dist: trusty
+      env: RELEASE=trusty
+      group: edge
+    - sudo: false
 
 env:
   global:
@@ -11,7 +20,8 @@ env:
 install: true
 
 script:
-  - cat ~/build.sh
+  - echo $PATH
+  - echo $PATH | grep '::' || true
 
 notifications:
   email: false
