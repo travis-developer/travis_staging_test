@@ -1,27 +1,16 @@
-language: ruby
+language: node_js
 
-rvm: default
+sudo: false
 
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-      env: RELEASE=precise
-    - sudo: required
-      dist: trusty
-      env: RELEASE=trusty
-      group: edge
-    - sudo: false
+install:
+  - true
+
+script:
+  - echo $NPM_CONFIG_REGISTRY
 
 env:
   global:
     - secure: "XKJs33OMgAJtxJzHqvRX6uOraC38H3Vdq6+i+1PmiItsnqc6guAQbNkTF39RMZW8EhrZrErUAlE/nISJ0dUC40qwStrTJs+LqnK6smW2TYDmd5sx2UxWNI7tpA6FNYbgQDvN6C/zDrLNwW6EVpSyS6zlHwVrVcikwIKVRmZZJjs="
-
-install: true
-
-script:
-  - echo $PATH
-  - echo $PATH | grep '::' || true
 
 notifications:
   email: false
