@@ -6,7 +6,7 @@ install:
   - true
 
 script:
-  - echo $NPM_CONFIG_REGISTRY
+  - true
 
 env:
   global:
