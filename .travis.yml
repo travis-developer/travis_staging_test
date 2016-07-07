@@ -1,17 +1,15 @@
-language: node_js
+language: python
 
 sudo: false
+
+python:
+  - pypy2-5.3.1
 
 install:
   - true
 
 script:
   - true
-
-env:
-  global:
-    - NPM_CONFIG_REGISTRY=npm.example.com
-    - secure: "XKJs33OMgAJtxJzHqvRX6uOraC38H3Vdq6+i+1PmiItsnqc6guAQbNkTF39RMZW8EhrZrErUAlE/nISJ0dUC40qwStrTJs+LqnK6smW2TYDmd5sx2UxWNI7tpA6FNYbgQDvN6C/zDrLNwW6EVpSyS6zlHwVrVcikwIKVRmZZJjs="
 
 notifications:
   email: false
