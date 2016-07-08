@@ -3,9 +3,9 @@ language: python
 sudo: required
 
 python:
-  - pypy2-5.3.1
+  - pypy-5.3.1
   - pypy3.3-5.2.0-alpha1
-  - pypy2-5.3.5 # nonexistent
+  - pypy-5.3.5 # nonexistent
 
 install:
   - true
