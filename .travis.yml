@@ -1,6 +1,8 @@
 language: ruby
 
-sudo: false
+os: osx
+
+osx_image: xcode7.3
 
 install:
   - true
@@ -10,14 +12,6 @@ script:
 
 notifications:
   email: false
-
-deploy:
-  provider: engineyard
-  api_key:
-    secure: FOOBAR
-  environment:
-    master: staging
-  app: myapp1
 
 notifications:
   email: false
