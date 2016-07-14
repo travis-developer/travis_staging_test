@@ -1,17 +1,12 @@
 language: ruby
 
-os: osx
-
-osx_image: xcode8
+sudo: false
 
 install:
   - true
 
 script:
   - true
-
-notifications:
-  email: false
 
 notifications:
   email: false
