@@ -5,7 +5,7 @@ sudo: false
 cache: bundler
 
 script:
-  - cat ~/build.sh
+  - true
 
 notifications:
   email: false
