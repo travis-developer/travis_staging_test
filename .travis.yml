@@ -19,7 +19,7 @@ matrix:
 cache: bundler
 
 script:
-  - true
+  - grep casher ~/build.sh
 
 notifications:
   email: false
