@@ -1,25 +1,17 @@
-language: ruby
+language: go
 
-matrix:
-  include:
-    - sudo: required
-      env:
-        - RELEASE=precise
-    - sudo: required
-      dist: trusty
-      env:
-        - RELEASE=trusty
-    - sudo: false
-      env:
-        - SUDO=false
-    - os: osx
-      env:
-        - OS=osx
+go:
+  - '1.1'
+  - '1.2'
+  - '1.3'
+  - '1.3.x'
+  - '1.6.x'
 
-cache: bundler
+installl:
+  - true
 
 script:
-  - grep casher ~/build.sh
+  - true
 
 notifications:
   email: false
