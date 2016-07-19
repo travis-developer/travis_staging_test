@@ -2,10 +2,11 @@ language: ruby
 
 sudo: false
 
-cache: bundler
+install:
+  - true
 
 script:
-  - grep casher ~/build.sh
+  - true
 
 notifications:
   email: false
