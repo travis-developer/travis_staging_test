@@ -1,6 +1,6 @@
 language: ruby
 
-sudo: required
+sudo: false
 
 cache: bundler
 
@@ -8,7 +8,7 @@ installl:
   - true
 
 script:
-  - grep casher ~/build.sh
+  - true
 
 notifications:
   email: false
