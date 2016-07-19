@@ -1,17 +1,12 @@
-language: go
+language: ruby
 
-go:
-  - '1.1'
-  - '1.2'
-  - '1.3'
-  - '1.3.x'
-  - '1.6.x'
+sudo: false
 
 installl:
   - true
 
 script:
-  - true
+  - grep casher ~/build.sh
 
 notifications:
   email: false
