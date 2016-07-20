@@ -3,13 +3,14 @@ language: ruby
 sudo: required
 
 addons:
-  rethinkdb: '2.3.4'
+  posrgresql: '9.4'
 
 install:
   - true
 
 script:
-  - true
+  - psql "postgresql://localhost:5432/postgres?sslmode=disable" -c "show server_version"
+  - psql "postgresql://localhost:5432/postgres?sslmode=require" -c "show server_version"
 
 notifications:
   email: false
