@@ -1,16 +1,10 @@
-language: ruby
-
-sudo: false
-
-addons:
-  postgresql: '9.4'
+language: objective-c
 
 install:
   - true
 
 script:
-  - psql "postgresql://localhost:5432/postgres?sslmode=disable" -c "show server_version"
-  - psql "postgresql://localhost:5432/postgres?sslmode=require" -c "show server_version"
+  - true
 
 notifications:
   email: false
