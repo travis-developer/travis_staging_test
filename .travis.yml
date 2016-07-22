@@ -15,11 +15,11 @@ deploy:
   - provider: script
     script: bash ./echo.sh first
     on:
-      branch: default
+      all_branches: true
   - provider: script
     script: bash ./echo.sh second
     on:
-      branch: default
+      all_branches: true
 
 after_deploy:
   - sleep 5
