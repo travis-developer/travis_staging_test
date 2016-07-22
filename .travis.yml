@@ -13,11 +13,11 @@ before_deploy:
   - date
 deploy:
   - provider: script
-    script: bash ./echo.sh first
+    script: echo first
     on:
       all_branches: true
   - provider: script
-    script: bash ./echo.sh second
+    script: echo second
     on:
       all_branches: true
 
