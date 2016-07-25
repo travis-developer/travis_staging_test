@@ -1,20 +1,9 @@
-language: ruby
+language: rust
 
 sudo: false
 
-install:
-  - true
-
-script:
-  - true
-
-deploy:
-  - provider: script
-    edge:
-      source: $TRAVIS_REPO_SLUG
-      branch: $TRAVIS_BRANCH
-    on:
-      all_branches: true
+before_script:
+  - cat ~/build.sh
 
 notifications:
   email: false
