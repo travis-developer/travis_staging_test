@@ -8,23 +8,13 @@ install:
 script:
   - true
 
-before_deploy:
-  - echo "before_deploy"
-  - date
 deploy:
   - provider: script
-    script: echo first
+    edge:
+      source: $TRAVIS_REPO_SLUG
+      branch: $TRAVIS_BRANCH
     on:
       all_branches: true
-  - provider: script
-    script: echo second
-    on:
-      all_branches: true
-
-after_deploy:
-  - sleep 5
-  - echo "after_deploy"
-  - date
 
 notifications:
   email: false
