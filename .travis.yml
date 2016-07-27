@@ -2,15 +2,20 @@ language: ruby
 
 sudo: false
 
-install:
-  - true
+install: true
 
 script:
-  - env | grep -c SAUCE || true
+  - cat ~/build.sh
 
-addons:
-  jwt:
-    secure: "BOGUS_STRING"
+deploy:
+  - provider: script
+    edge:
+      source: travis-ci/dpl
+    script: echo "foo"
+  - provider: script
+    edge:
+      source: travis-ci/dpl
+    script: echo "bar"
 
 notifications:
   email: false
