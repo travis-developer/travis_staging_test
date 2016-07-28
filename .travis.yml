@@ -1,6 +1,6 @@
 language: clojure
 
-lein: lein1
+lein: '2.6.1'
 
 sudo: false
 
