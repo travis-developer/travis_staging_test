@@ -1,14 +1,10 @@
 language: clojure
 
-lein: '2.5.1'
-
 sudo: false
 
-install:
-  - true
+before_install:
+  - find ~/.lein
 
-script:
-  - true
 
 notifications:
   email: false
