@@ -1,20 +1,17 @@
-language: python
+language: clojure
+
+lein:
+  - lein1
+  - lein
+  - 2.6.1
 
 sudo: false
-
-addons:
-  jwt:
-    secure: "N6vucXdgkH6uQoHNb2mT0kiX4hPJfQeLyzCepcCDX2MhDL7ImLnDaEwHqRJgBX/qH+YFCTg3uhMz4sBkQziXU3TCMmIkMmr8TN/cieubTwhm9YbeQylsK8B2RwbVSOFhWdZzwt0uejU9vfV5gapZggC0v5vTUsr3MaeA6jhMPimjd66SgXCiMtCwSjhtecHwMJfb0fqxpdLtOnVMjmUfxi6d1N2/9qnF57HFQ48aDT0GO1KKX85XIqTEyAt+iFn82MUt+KrinjHuikVhizVFlKPuQaKVWdxygGt+d6H1gBsisC3Dwck5SooSiVdlnFKB1izH45Q6FZMpWbkV4KgSr0d/hHq0C3hj2RsqMgKKzzgt47MU+vMSTz1nnoRqwaZacT7G9TaLZU4vl37FwbKXTl4yNoW1TsZQlVd/q2QWjrL/i+qMoq/J1Zrp+SFlgdaqlXwqbU3WOrlIJ/oZopjfBrvTX9l5ebZY/yZheQ8MByIN6SxGMZg7CxU0Q26/rRgvduld/9n2FTI8metgYgN9Pq5G1S8X5cS2Vx3zNXWRMfelGjzwLcQWlTGKpvpXe4XAyNHHZn7A/jCYUdNgAuWFrM/4lEhJLMRg+fRZ5LKA940Rx7dARXm8qBIIrqrKd7GLVyjALfBpaxhd2wxF7zDU7Ta1xmMVK1aaIMaBASizrFQ="
-
-env:
-  - secure: "RaICm1w19sJhve7aVHNxGrHofA6XBeNy87pYHkAEUrxyB7pw0uaklArXyh2cUfMXLmy5o5Xs88FZt4KYkJvUENInzKJC9YZQl+A+QdnQGQO0GG9Jc4gHBkqJ55VuDGzMMoEeZqes8in6n135H0+8YuLqzDYk+fEyuC06Mj8af9RtGBrRI09QP4QAFdtWUdlfTh8kKp5LYtiUygFX7XDFpnFmamjLAySaKAKF+fmKiSmlolBmzuCfzNg0obEeFnvoUUqL9W5NTsMgADzTUot18YnV731obcx4tMH8y9l5BTihDCFOCcdNRjXieje7/QKbBnM13Axe77+05usb3cB6Owrdt3gpvnaQR/hv56xs+OuSn9UE9rJKJgzMi5Bs0DEnIntdgShBmMoOKCBJ9K94QPVO9+SruFDRGX8cmL+tAzZR6Q32QDaEg2eHHA2q0IXBLEW00fhuhBrWkn85N3BXfjajct1GwSgVneACFJupibq79JqarZOwuCVhb5sRr7JalZo7+2Pe2sZWI2QuoSHNFwR9TuxMQ871kK20UHn0vsYeW8F8Ry/kx1oU9P/kZCNlguF96CcYufYdRiZ66ic+Nq9ggCksCga2gN1kMsUj6r9d/XnTTnLTRta4YC4cNgRQH76iyERIae7FMf7hBruZ88JcPSqecRTYI/VaiVXQW+U="
 
 install:
   - true
 
 script:
-  - echo $SAUCE_ACCESS_KEY
-  - echo $FOO
+  - true
 
 notifications:
   email: false
