@@ -1,23 +1,16 @@
 language: python
 
-sudo: required
+sudo: false
 
-python:
-  - pypy-5.3.1
-  - pypy-5.0.0
-  - pypy3.3-5.2-alpha1
-  - pypy-5.3.5 # nonexistent
-
-matrix:
-  allowed_failures:
-    - pypy3.3-5.2-alpha1
-    - pypy-5.3.5
+addons:
+  jwt:
+    secure: "NvXCZP21Ftns970/7yLcwfUm2hTua73i3SVOR7Qx4ANSgqrGefM3CU3DPvnc963g/J38CUC51gkNgiQK0L5T8xOg0bAlg+Z3AQyeTprLyUfLK6hswXJ1iXRCknU9yf7wxdWZET/xET4WcSCRxtlQCAY9zUmdpFI3DzZhIG2xgNiRLj5xehEFDLMgL/UB0FHkaL2eS4tGty6u+OL+S2SbOOJdba4yJAAW/EGBM0RF3z7DPbm1GFEibOWLeKhO/LL5YrlBLNpJqmJzFyszTiKdOmUXhEz1bYFUL6AcjjRRYA2B6j5stVaduW2LHGwrrQ87ihULdhQxPIR8rNcEsIqUeTXM/mHAYoSV6Mknrcw3lCxNg2mJdvvP529hpcY222tIu2mospHAjcycLA8pUg2jahCEKMo2LPquaA/CIUJcIOE73mpabtnAHgU3tU5yR8HCHNL7Qk22afIjS9T8x8J3i7yNKYkyqKxA52+FilWea/+Mf5N0KptE+rDX4J967yKBsaex6hw75JaQvfauL+nd1MluOHt4hkx/t6eHl+Fgb0KtMOMrjFpHN5a2UUhg5gtCFIwWpK3BNeVojwsrYmJ1zTnhVKQztA7wguGDpFDziA7UQSf+a1/9NWZ3sG9WDW5FtkldQYbEADajm05afXW/1tVn2Sh4q/3RtGQ2uM2wiR4="
 
 install:
   - true
 
 script:
-  - true
+  - echo $SAUCE_ACCESS_KEY
 
 notifications:
   email: false
