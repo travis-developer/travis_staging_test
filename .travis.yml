@@ -2,35 +2,21 @@ language: ruby
 
 sudo: false
 
-env:
-  global:
-    - SKYLIGHT_ENABLE_TRACE_LOGS=true
-    - SKYLIGHT_REQUIRED=true
-    - SKYLIGHT_TEST_DIR=/tmp
-    - RAILS_ENV=development
-    - EMBEDDED_HTTP_SERVER_TIMEOUT=30
-    - WORKER_SPAWN_TIMEOUT=15
-  matrix:
-    # The first one is intentionally empty in order to run without any extra env vars
-    -
-
-rvm:
-  - 2.3.0
-
-matrix:
-  include:
-    - rvm: 2.3.0
-      gemfile: gemfiles/Gemfile.sinatra-edge
-
-  allow_failures:
-    # Testing edge is nice, but it probably shouldn't kill the build
-    - gemfile: gemfiles/Gemfile.sinatra-edge
+before_install:
+  - set -e
 
 install:
   - true
 
 script:
   - true
+
+deploy:
+  provider: script
+  script:
+    - false
+  on:
+    all_branches: true
 
 notifications:
   email: false
