@@ -11,6 +11,10 @@ install:
 script:
   - true
 
+deploy:
+  provider: script
+  script: 'echo "true"'
+
 notifications:
   email: false
   # slack:
