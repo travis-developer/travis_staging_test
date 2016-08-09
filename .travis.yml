@@ -1,6 +1,7 @@
 language: ruby
 
-os: osx
+sudo: required
+
 
 cache: bundler
 
