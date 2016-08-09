@@ -1,24 +1,14 @@
-language: ruby
+language: python
 
 sudo: false
 
-cache: bundler
-
-before_install:
-  - set -e
+python: '3.5'
 
 install:
   - true
 
 script:
-  - true
-
-deploy:
-  provider: script
-  script:
-    - 'false'
-  on:
-    all_branches: true
+  - echo $PATH | tr ":" "\n"
 
 notifications:
   email: false
