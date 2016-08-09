@@ -1,14 +1,11 @@
-language: python
+language: ruby
 
-sudo: false
+os: osx
 
-python: '3.5'
-
-install:
-  - true
+cache: bundler
 
 script:
-  - echo $PATH | tr ":" "\n"
+  - true
 
 notifications:
   email: false
