@@ -4,6 +4,9 @@ os: osx
 
 cache: bundler
 
+install:
+  - true
+
 script:
   - true
 
