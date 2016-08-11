@@ -1,20 +1,10 @@
 language: ruby
 
-os: osx
-
-cache: bundler
-
 install:
   - true
 
 script:
-  - true
-
-deploy:
-  provider: script
-  script: 'echo "true"'
-  on:
-    all_branches: true
+  - cat /etc/hosts
 
 notifications:
   email: false
