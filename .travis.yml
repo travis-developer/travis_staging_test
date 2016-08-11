@@ -2,18 +2,14 @@ language: ruby
 
 sudo: false
 
-addons:
-  hosts:
-    - foobar
+services:
+  - mongodb
 
 install:
   - true
 
-before_script:
-  - ruby -rsocket -e 'TCPServer.new("foobar", 2000); loop do sleep 1; end' &
-
 script:
-  - ruby -rsocket -e 'TCPSocket.new("foobar",2000)'
+  - ps -ef | grep mongo
 
 notifications:
   email: false
