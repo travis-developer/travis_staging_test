@@ -2,14 +2,11 @@ language: node_js
 
 sudo: false
 
-services:
-  - mongodb
-
 install:
   - true
 
 script:
-  - ps -ef | grep mongo
+  - echo $PATH | tr ":" "\n"
 
 notifications:
   email: false
