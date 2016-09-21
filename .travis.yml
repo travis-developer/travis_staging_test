@@ -8,6 +8,13 @@ install:
 script:
   - true
 
+addons:
+  coverity_scan:
+    project:
+      name: foobar
+      version: '1.0'
+      description: foo
+
 notifications:
   email: false
 #  webhooks: http://requestb.in/1365tca1
