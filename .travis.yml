@@ -2,18 +2,13 @@ language: elixir
 
 sudo: false
 
+cache: bundler
+
 install:
   - true
 
 script:
   - true
-
-addons:
-  coverity_scan:
-    project:
-      name: foobar
-      version: '1.0'
-      description: foo
 
 notifications:
   email: false
