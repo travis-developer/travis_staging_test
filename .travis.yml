@@ -1,4 +1,4 @@
-language: elixir
+language: ruby
 
 sudo: required
 
