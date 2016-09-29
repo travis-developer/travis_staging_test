@@ -1,6 +1,8 @@
 language: elixir
 
-sudo: false
+sudo: required
+
+dist: trusty
 
 cache: bundler
 
