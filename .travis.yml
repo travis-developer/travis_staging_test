@@ -1,10 +1,13 @@
-language: ruby
+language: php
+
+php:
+  - hhvm-nightly
+  - hhvm
+  - '7.0'
 
 sudo: required
 
 dist: trusty
-
-cache: bundler
 
 script:
   - true
