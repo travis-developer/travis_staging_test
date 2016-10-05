@@ -1,9 +1,9 @@
-language: c
+language: clang
 
 os: osx
 
 install:
-  - true
+  - gem install xcpretty
 
 script:
   - true
