@@ -1,12 +1,13 @@
-language: clang
+language: cpp
 
 os: osx
+compiler: clang
 
 install:
   - gem install xcpretty
 
 script:
-  - true
+  - echo hola
 
 notifications:
   email: false
