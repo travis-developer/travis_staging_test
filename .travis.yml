@@ -1,13 +1,12 @@
-language: cpp
+language: ruby
 
-os: osx
-compiler: clang
+sudo: false
 
 install:
-  - gem install xcpretty
+  - install
 
 script:
-  - echo hola
+  - env | grep TRAVIS | sort
 
 notifications:
   email: false
