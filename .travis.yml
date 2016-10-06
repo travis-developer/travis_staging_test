@@ -1,11 +1,9 @@
 language: ruby
 
-sudo: required
-
-dist: trusty
+sudo: false
 
 install:
-  - install
+  - true
 
 script:
   - env | grep TRAVIS | sort
