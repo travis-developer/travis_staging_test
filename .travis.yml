@@ -6,7 +6,7 @@ install:
   - true
 
 script:
-  - grep -v export ~/build.sh
+  - true
 
 addons:
   srcclr: true
