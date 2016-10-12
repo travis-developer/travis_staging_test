@@ -10,7 +10,7 @@ script:
 
 addons:
   srcclr:
-    api_key: FOOR
+    api_token: FOOR
 
 notifications:
   email: false
