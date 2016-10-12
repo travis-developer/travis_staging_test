@@ -6,7 +6,10 @@ install:
   - true
 
 script:
-  - env | grep TRAVIS | sort
+  - true
+
+addons:
+  srcclr: true
 
 notifications:
   email: false
