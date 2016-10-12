@@ -9,8 +9,7 @@ script:
   - grep -v export ~/build.sh
 
 addons:
-  srcclr:
-    api_token: FOOBAR!
+  srcclr: true
 
 notifications:
   email: false
