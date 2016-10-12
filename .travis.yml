@@ -9,7 +9,8 @@ script:
   - true
 
 addons:
-  srcclr: true
+  srcclr:
+    api_key: FOOR
 
 notifications:
   email: false
