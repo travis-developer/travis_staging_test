@@ -2,11 +2,14 @@ language: ruby
 
 sudo: false
 
+before_install:
+  - env | sort
+
 install:
   - true
 
 script:
-  - env | sort
+  - true
 
 addons:
   firefox: '50.0b6'
