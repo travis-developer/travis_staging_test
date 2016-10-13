@@ -13,8 +13,7 @@ addons:
   sauce_connect:
     user_name: "SUPER_DUPER_USER"
   jwt:
-    secure: "bu9zz6G4Y35YJrRbCSbOA0+oojhsji+G4QiPMMqoW16PKvEioamuiJPQgflu1IVuRWiuB+MuOrrbeF4rfDNUvnTAIMfzSm42ZBurUUbqAxbYHhJfHavnyTjduHm3C0MnyRQP7YESDS4cSyWOFTMRp9OoLIHxHeDh7/Y7QZzKFmI="
-
+    secure: "glhwQOdHBChfIg+abj4dDOItlOHOMzfSPZ5pfmfJn9sc8mwMBj3EwUoVQ1aPIKOtXtoFukGPnwaiVopaNQ+uPtZ1DNSPtkWzR7pxsaIpGpL/D+nX2tBmSmCUPO2EG9N9oS9rHtjaAnj1R3UxbTOHIDc68EsmXsgbW99qE+IRTvk="
 
 notifications:
   email: false
