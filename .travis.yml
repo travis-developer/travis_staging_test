@@ -9,8 +9,7 @@ script:
   - true
 
 addons:
-  srcclr:
-    api_token: FOOR
+  firefox: '50.0b6'
 
 notifications:
   email: false
