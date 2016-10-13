@@ -15,9 +15,6 @@ addons:
   firefox: '50.0b6'
   sauce_connect:
     username: "SUPER_DUPER_USER"
-  jwt:
-    secure: "glhwQOdHBChfIg+abj4dDOItlOHOMzfSPZ5pfmfJn9sc8mwMBj3EwUoVQ1aPIKOtXtoFukGPnwaiVopaNQ+uPtZ1DNSPtkWzR7pxsaIpGpL/D+nX2tBmSmCUPO2EG9N9oS9rHtjaAnj1R3UxbTOHIDc68EsmXsgbW99qE+IRTvk="
-
 
 notifications:
   email: false
