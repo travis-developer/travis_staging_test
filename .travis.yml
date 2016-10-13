@@ -6,7 +6,7 @@ install:
   - true
 
 script:
-  - true
+  - env | sort
 
 addons:
   firefox: '50.0b6'
