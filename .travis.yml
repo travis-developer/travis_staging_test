@@ -4,7 +4,7 @@ install:
   - true
 
 script:
-  - true
+  - env | grep TRAVIS | sort
 
 notifications:
   email: false
