@@ -9,7 +9,7 @@ addons:
   firefox: 'latest-dev'
 
 script:
-  - env | grep TRAVIS | sort
+  - firefox --version
 
 notifications:
   email: false
