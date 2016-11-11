@@ -1,15 +1,12 @@
-language: ruby
+language: objective-c
 
-sudo: false
+osx_image: xcode8.1
 
 install:
   - true
 
-addons:
-  firefox: 'latest-dev'
-
 script:
-  - firefox --version
+  - true
 
 notifications:
   email: false
