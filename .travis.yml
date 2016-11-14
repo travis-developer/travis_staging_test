@@ -1,6 +1,9 @@
-language: objective-c
+language: java
 
-osx_image: xcode8.1
+sudo: required
+
+jdk:
+  - oraclejdk8
 
 install:
   - true
