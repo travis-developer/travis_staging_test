@@ -3,9 +3,9 @@ language: node_js
 node_js:
   - '4'
 
-os: osx
+sudo: false
 
-osx_image: xcode8.1
+dist: trusty
 
 install:
   - true
