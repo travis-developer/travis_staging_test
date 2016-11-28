@@ -14,7 +14,10 @@ install:
   - true
 
 script:
-  - true
+  - which firefox
+  - firefox --version
+  - which firefox-bin
+  - firefox-bin --version
 
 notifications:
   email: false
