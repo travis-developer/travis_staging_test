@@ -5,19 +5,11 @@ node_js:
 
 sudo: false
 
-dist: trusty
-
-addons:
-  firefox: latest-esr
-
 install:
   - true
 
 script:
-  - which firefox
-  - firefox --version
-  - which firefox-bin
-  - firefox-bin --version
+  - echo $PATH | tr ":" "\n" | sort
 
 notifications:
   email: false
