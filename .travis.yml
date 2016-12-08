@@ -1,7 +1,7 @@
-language: node_js
+language: ruby
 
-node_js:
-  - '4'
+rvm:
+  - '1.8.7'
 
 sudo: false
 
@@ -9,7 +9,7 @@ install:
   - true
 
 script:
-  - echo $PATH | tr ":" "\n" | sort
+  - true
 
 notifications:
   email: false
