@@ -3,7 +3,9 @@ language: ruby
 rvm:
   - ree
 
-sudo: required
+sudo: false
+
+dist: trusty
 
 install:
   - true
