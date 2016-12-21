@@ -1,17 +1,18 @@
 language: ruby
 
-rvm:
-  - ree
-
 sudo: false
 
 dist: trusty
+
+env:
+  global:
+    - PAGER=less
 
 install:
   - true
 
 script:
-  - true
+  - env | grep PAGER
 
 notifications:
   email: false
