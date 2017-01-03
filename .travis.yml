@@ -1,8 +1,9 @@
-language: ruby
+language: go
 
 sudo: false
 
-dist: trusty
+go:
+  - 1.6.x
 
 env:
   global:
@@ -12,7 +13,7 @@ install:
   - true
 
 script:
-  - env | grep PAGER
+  - true
 
 notifications:
   email: false
