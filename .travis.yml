@@ -1,9 +1,12 @@
-language: go
+language: ruby
 
-sudo: false
+os: osx
 
-go:
-  - 1.6.x
+osx_image: xcode8.1
+
+rvm:
+  - '2.3.3'
+  - '2.2.6'
 
 env:
   global:
