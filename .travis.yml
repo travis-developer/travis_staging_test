@@ -1,16 +1,14 @@
-language: ruby
+language: generic
 
-os: osx
+sudo: false
 
-osx_image: xcode8.1
+dist: trusty
 
-rvm:
-  - '2.3.3'
-  - '2.2.6'
+addons:
+  sauce_connect:
+    username: "Your Sauce Labs username"
+    access_key: "Your Sauce Labs access key"
 
-env:
-  global:
-    - PAGER=less
 
 install:
   - true
