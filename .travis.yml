@@ -1,14 +1,12 @@
-language: generic
+language: ruby
 
 sudo: false
 
 dist: trusty
 
-addons:
-  sauce_connect:
-    username: "Your Sauce Labs username"
-    access_key: "Your Sauce Labs access key"
-
+rvm:
+  - rbx
+  - rbx-3.69
 
 install:
   - true
