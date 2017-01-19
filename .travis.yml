@@ -5,8 +5,23 @@ sudo: false
 dist: trusty
 
 rvm:
-  - rbx
-  - rbx-3.69
+  - "2.3.0"
+  - "2.3.1"
+
+env:
+  - FOO=1
+  - FOO=2
+  - FOO=3
+  - FOO=4
+  - FOO=5
+  - FOO=6
+  - FOO=7
+  - FOO=8
+
+matrix:
+  allow_failures:
+    - rvm: "2.3.1"
+      env: FOO=1
 
 install:
   - true
