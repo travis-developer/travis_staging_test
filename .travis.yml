@@ -6,7 +6,7 @@ install:
   - true
 
 script:
-  - true
+  - cat ~/build.sh
 
 notifications:
   email: false
