@@ -2,25 +2,11 @@ language: ruby
 sudo: false
 dist: trusty
 
-rvm:
-  - '2.1'
-  - '2.4.0'
-
-env:
-  - FOO=bar1
-  - FOO=bar2
-
-matrix:
-  allow_failures:
-    - rvm: '2.1'
-      env: FOO=bar2
-
 install:
   - true
 
 script:
-  - echo $TRAVIS_ALLOW_FAILRUE
-
+  - true
 
 notifications:
   email: false
