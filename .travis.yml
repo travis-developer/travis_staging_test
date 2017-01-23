@@ -4,24 +4,27 @@ language: ruby
 sudo: false
 dist: trusty
 
-env:
-  - FOO=bar
-  - BAR=baz
-
-rvm:
-  - '2.4.0'
-  - '2.3.1'
-
-matrix:
-  allow_failures:
-    - env: FOO=bar
-      rvm: '2.4.0'
-
 install:
   - true
 
 script:
   - echo $TRAVIS_COMMIT_MESSAGE
+
+before_deploy:
+  - echo "before"
+
+deploy:
+  - provider: script
+    script: echo 1
+    on:
+      all_branches: true
+  - provider: script
+    script: echo 2
+    on:
+      all_branches: true
+
+after_deploy:
+  - echo "after"
 
 notifications:
   email: false
