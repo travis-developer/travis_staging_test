@@ -1,21 +1,27 @@
 language: ruby
 
+language: ruby
 sudo: false
-
 dist: trusty
+
+env:
+  - FOO=bar
+  - BAR=baz
+
+rvm:
+  - '2.4.0'
+  - '2.3.1'
+
+matrix:
+  allow_failures:
+    - env: FOO=bar
+      rvm: '2.4.0'
 
 install:
   - true
 
 script:
   - true
-
-addons:
-  sauce_connect:
-    username:
-      secure: "FcpwNWPOSaASe7iBd0XRbY8ZhZfN9ox0wUZMHxrlvMHfwom+cqVKiygtXShQCNlq9+9vSXQett76xqaQwbTaq/Pnn/Y4FmecaLw+RcbfVSjLjFzw6l+UqsKGZLismaNjfAb/YDrIDVjeG3Z+fMdRUOzihHR2P1qgLNwEtM3yYro="
-    access_key:
-      secure: "GsjREudfNLfvZAgcVzyM/5GVE5KdyDW31lgLijma8rDnvxSQB8/zfGYooyJyTiuQB75ubAZD/Qih4lrLmCsSRfAv06myfzAl4c7WhlzuraZtyD8N/aDkjFGzNtiiAtEb/iWhzkV0hTMT4PO71uJc6kEtqMp7sei7oom2gk8yRuI="
 
 notifications:
   email: false
