@@ -1,30 +1,26 @@
 language: ruby
-
-language: ruby
 sudo: false
 dist: trusty
+
+rvm:
+  - '2.1'
+  - '2.4.0'
+
+env:
+  - FOO=bar1
+  - FOO=bar2
+
+matrix:
+  allow_failure:
+    - rvm: '2.1'
+      env: FOO=bar2
 
 install:
   - true
 
 script:
-  - echo $TRAVIS_COMMIT_MESSAGE
+  - echo $TRAVIS_ALLOW_FAILRUE
 
-before_deploy:
-  - echo "before"
-
-deploy:
-  - provider: script
-    script: echo 1
-    on:
-      all_branches: true
-  - provider: script
-    script: echo 2
-    on:
-      all_branches: true
-
-after_deploy:
-  - echo "after"
 
 notifications:
   email: false
