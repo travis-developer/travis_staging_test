@@ -1,12 +1,14 @@
-language: ruby
+language: php
 sudo: false
-dist: trusty
+
+php: '7.0'
 
 install:
   - true
 
 script:
   - cat ~/build.sh
+  - echo $archive_url
 
 notifications:
   email: false
