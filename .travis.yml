@@ -3,11 +3,15 @@ sudo: false
 
 php: '7.0'
 
+env:
+  global:
+    - secure: "KGOOLrFmj6tH9swsoN9m50a5FJqbRpUkqE58ZpZgLf6c9dgcZIzskRun3jnLFN0sVpjYksynSzrRVjDO+y/4Xdf6RO/YjMg8Wm3ollOYLV2SH7uyyrEnIx1fFFH1Vxsrg3KuSVD7Caq7B9dsfCGE+MnmAoZjgHDW6uq05pz9fxE="
+
 install:
   - true
 
 script:
-  - cat ~/build.sh
+  - false
   - echo $archive_url
 
 notifications:
