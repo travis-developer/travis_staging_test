@@ -15,10 +15,6 @@ matrix:
       env: FOO=bar
       branch: master
 
-env:
-  global:
-    - secure: "KGOOLrFmj6tH9swsoN9m50a5FJqbRpUkqE58ZpZgLf6c9dgcZIzskRun3jnLFN0sVpjYksynSzrRVjDO+y/4Xdf6RO/YjMg8Wm3ollOYLV2SH7uyyrEnIx1fFFH1Vxsrg3KuSVD7Caq7B9dsfCGE+MnmAoZjgHDW6uq05pz9fxE="
-
 install:
   - true
 
