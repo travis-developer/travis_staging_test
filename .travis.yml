@@ -13,7 +13,7 @@ matrix:
   allow_failures:
     - php: '7.0'
       env: FOO=bar
-      branch: default
+      branch: master
 
 env:
   global:
