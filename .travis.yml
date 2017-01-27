@@ -1,26 +1,33 @@
-language: php
+language: java
 sudo: false
+dist: precise
 
-php:
-  - '7.0'
-  - '5.6'
+jdk: openjdk7
 
 env:
-  - FOO=bar
-  - FOO=baz
+  - DIST=precise STACK=EC2
 
 matrix:
-  allow_failures:
-    - php: '7.0'
-      env: FOO=bar
-      branch: default
+  include:
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
 
 install:
   - true
 
 script:
-  - false
-  - echo $archive_url
+  - echo $JAVA_HOME
+  - which javac
+branches:
+  only:
+    - default
 
 notifications:
   email: false
