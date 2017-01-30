@@ -2,8 +2,6 @@ language: java
 sudo: false
 dist: precise
 
-jdk: openjdk7
-
 env:
   - DIST=precise STACK=EC2
 
@@ -18,6 +16,8 @@ matrix:
     - sudo: required
       dist: trusty
       env: DIST=trusty STACK=GCE
+  allow_failures:
+    - dist: trusty
 
 install:
   - true
@@ -25,9 +25,6 @@ install:
 script:
   - echo $JAVA_HOME
   - which javac
-branches:
-  only:
-    - default
 
 notifications:
   email: false
