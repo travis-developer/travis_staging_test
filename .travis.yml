@@ -17,7 +17,7 @@ matrix:
       dist: trusty
       env: DIST=trusty STACK=GCE
   allow_failures:
-    - dist: trusty
+    - dist: precise
 
 install:
   - true
