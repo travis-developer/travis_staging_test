@@ -22,10 +22,6 @@ matrix:
 install:
   - true
 
-script:
-  - echo $JAVA_HOME
-  - which javac
-
 notifications:
   email: false
   #  webhooks: http://requestb.in/rin6s6ri
