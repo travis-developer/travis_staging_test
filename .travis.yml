@@ -1,9 +1,6 @@
 language: java
 sudo: false
 
-services:
-  - docker
-
 # env:
 #   - DIST=precise STACK=EC2
 
