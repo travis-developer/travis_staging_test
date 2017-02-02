@@ -24,8 +24,7 @@ services:
 install:
   - true
 
-script:
-  - git diff $TRAVIS_COMMIT_RANGE --name-only
+script: true
 
 notifications:
   email: false
