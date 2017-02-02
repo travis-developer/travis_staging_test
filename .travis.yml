@@ -25,7 +25,7 @@ install:
   - true
 
 script:
-  - lsb_release -cs
+  - git diff $TRAVIS_COMMIT_RANGE --name-only
 
 notifications:
   email: false
