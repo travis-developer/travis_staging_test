@@ -4,6 +4,7 @@ sudo: false
 go:
   - '1'
   - '1.x'
+  - '1.7'
 # env:
 #   - DIST=precise STACK=EC2
 
