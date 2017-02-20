@@ -27,7 +27,7 @@ addons:
 install:
   - true
 
-script: true
+script: cat ~/build.sh
 
 
   #  webhooks: http://requestb.in/rin6s6ri
