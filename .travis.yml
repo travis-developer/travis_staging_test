@@ -1,20 +1,20 @@
-language: csharp
+language: ruby
 sudo: false
 
 env:
   - DIST=precise STACK=EC2
 
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+# matrix:
+#   include:
+#     - sudo: required
+#       dist: precise
+#       env: DIST=precise STACK=GCE
+#     - sudo: false
+#       dist: trusty
+#       env: DIST=trusty STACK=EC2
+#     - sudo: required
+#       dist: trusty
+#       env: DIST=trusty STACK=GCE
 #   allow_failures:
 #     - dist: precise
 
@@ -25,6 +25,14 @@ script: true
 
 notifications:
   email: false
+  discord:
+    channels:
+      - [webhook_id]:[webhook_token]
+      - [webhook_id_2]:[webhook_token_2]
+    pull_request_template:
+      - 'Build [#%{build_number}](%{build_url}) ([%{commit}](%{compare_url})) of %{repository}@%{branch} in PR [#%{pull_request_number}](%{pull_request_url}) by %{author} %{result} in %{duration}'
+    branch_template:
+      - 'Build [#%{build_number}](%{build_url}) ([%{commit}](%{compare_url})) of %{repository}@%{branch} by %{author} %{result} in %{duration}'
   #  webhooks: http://requestb.in/rin6s6ri
   #slack:
   #  rooms:
