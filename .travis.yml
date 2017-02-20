@@ -1,8 +1,9 @@
 language: ruby
-sudo: false
+sudo: required
+dist: trusty
 
-env:
-  - DIST=precise STACK=EC2
+# env:
+#   - DIST=precise STACK=EC2
 
 # matrix:
 #   include:
@@ -21,18 +22,9 @@ env:
 install:
   - true
 
-script: true
+script: sudo apt-get install -qq -y libatlas3gf-base libmemcached-dev libxmlsec1-dev
 
-notifications:
-  email: false
-  discord:
-    channels:
-      - webhook_id:webhook_token
-      - webhook_id_2:webhook_token_2
-    pull_request_template:
-      - 'Build [#%{build_number}](%{build_url}) ([%{commit}](%{compare_url})) of %{repository}@%{branch} in PR [#%{pull_request_number}](%{pull_request_url}) by %{author} %{result} in %{duration}'
-    branch_template:
-      - 'Build [#%{build_number}](%{build_url}) ([%{commit}](%{compare_url})) of %{repository}@%{branch} by %{author} %{result} in %{duration}'
+
   #  webhooks: http://requestb.in/rin6s6ri
   #slack:
   #  rooms:
