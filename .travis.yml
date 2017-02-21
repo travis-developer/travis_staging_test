@@ -2,10 +2,7 @@ language: ruby
 sudo: false
 dist: trusty
 
-addons:
-  apt:
-    packages:
-      - libatlas3gf-base
+cache: bundler
 
 # env:
 #   - DIST=precise STACK=EC2
@@ -27,7 +24,8 @@ addons:
 install:
   - true
 
-script: cat ~/build.sh
+script:
+  - true
 
 
   #  webhooks: http://requestb.in/rin6s6ri
