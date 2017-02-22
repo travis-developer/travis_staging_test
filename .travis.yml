@@ -23,7 +23,7 @@ install:
   - true
 
 script:
-  - true
+  - grep -C 5 sbt ~/build.sh
 
 
   #  webhooks: http://requestb.in/rin6s6ri
