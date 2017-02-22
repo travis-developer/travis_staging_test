@@ -1,9 +1,8 @@
-language: scala
+language: ruby
 sudo: false
 dist: precise
 
-env:
-  - secure: "S0RsQakHI6oiYFInRMJMo1k83hEM3o0/ROnRTno7peNZYsTDrVqTUoZHId2a6BoAkER375HGScb3cZtSNhEt9gWeVESRo9DpM6jmgodcnrkMT/y5bTx1bJpj0/ZlBFGXHCfWJXVMR7s+E0axE4kLa3y0efWbJ8U5mVDLFL9VtMk="
+# env:
   # - DIST=precise STACK=EC2
 
 # matrix:
@@ -24,7 +23,7 @@ install:
   - true
 
 script:
-  - true
+  - cat ~/build.sh
 
 
   #  webhooks: http://requestb.in/rin6s6ri
