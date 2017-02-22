@@ -1,8 +1,6 @@
-language: ruby
+language: scala
 sudo: false
 dist: trusty
-
-cache: bundler
 
 # env:
 #   - DIST=precise STACK=EC2
