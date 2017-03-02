@@ -1,9 +1,21 @@
-language: ruby
+language: dart
+
 sudo: false
-dist: precise
+
+dart:
+# Install the latest stable release
+- stable
+# Install the latest dev release
+- dev
+# Install a specific stable release - 1.15.0
+- "1.15.0"
+
+dart_tasks:
+- test: --platform vm
+- test: --platform chrome
 
 # env:
-  # - DIST=precise STACK=EC2
+#   - DIST=precise STACK=EC2
 
 # matrix:
 #   include:
@@ -16,8 +28,6 @@ dist: precise
 #     - sudo: required
 #       dist: trusty
 #       env: DIST=trusty STACK=GCE
-#   allow_failures:
-#     - dist: precise
 
 install:
   - true
