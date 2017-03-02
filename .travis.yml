@@ -29,12 +29,6 @@ dart_tasks:
 #       dist: trusty
 #       env: DIST=trusty STACK=GCE
 
-install:
-  - true
-
-script:
-  - cat ~/build.sh
-
 
   #  webhooks: http://requestb.in/rin6s6ri
   #slack:
