@@ -2,6 +2,8 @@ language: elm
 
 sudo: false
 
+node_js: 6
+
 
 # env:
 #   - DIST=precise STACK=EC2
