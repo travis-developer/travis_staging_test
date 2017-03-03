@@ -1,7 +1,5 @@
 language: elm
 
-node_js: 6
-
 sudo: false
 
 
