@@ -1,18 +1,9 @@
-language: dart
+language: elm
+
+node_js: 6
 
 sudo: false
 
-dart:
-# Install the latest stable release
-- stable
-# Install the latest dev release
-- dev
-# Install a specific stable release - 1.15.0
-- "1.15.0"
-
-dart_tasks:
-- test: --platform vm
-- test: --platform chrome
 
 # env:
 #   - DIST=precise STACK=EC2
