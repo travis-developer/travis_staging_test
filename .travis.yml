@@ -5,7 +5,8 @@ sudo: false
 addons:
   sauce_connect:
     username: foobar
-    jwt: some_stuff
+    jwt:
+      secure: "YmRhWMqJHISNX6YF6VjXce6rypqvOObAm2Xq0MCpwSUSo8uTu/BWSPIUsRux5SVXyG4LEDYJoxaZWwEG9mNH+WcMSNYmhkDYyh6NJ93ux0Nr/rFbyJQfwe4oZbrtEDQgF1zIL7OqD/PT7JJp9+kTmDYKjaw8oGSYODaAeqT7sBE="
 
 # env:
 #   - DIST=precise STACK=EC2
