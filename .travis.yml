@@ -1,18 +1,14 @@
-language: dart
+language: ruby
 
 sudo: false
 
-dart:
-# Install the latest stable release
-- stable
-# Install the latest dev release
-- dev
-# Install a specific stable release - 1.15.0
-- "1.15.0"
+cache: bundler
 
-dart_tasks:
-- test: --platform vm
-- test: --platform chrome
+install:
+  - true
+
+script:
+  - true
 
 # env:
 #   - DIST=precise STACK=EC2
