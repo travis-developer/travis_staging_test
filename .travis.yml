@@ -1,10 +1,6 @@
-language: ruby
+language: scala
 
 sudo: false
-
-cache:
-  bundler: true
-  edge: true
 
 install:
   - true
