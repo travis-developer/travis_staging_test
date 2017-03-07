@@ -1,4 +1,6 @@
-language: go
+language: node_js
+
+node_js: 7
 
 sudo: false
 
@@ -6,7 +8,7 @@ install:
   - true
 
 script:
-  - cat ~/build.sh
+  - find ~/.nvm
 
 # env:
 #   - DIST=precise STACK=EC2
