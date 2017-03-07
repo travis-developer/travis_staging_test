@@ -8,7 +8,7 @@ install:
   - true
 
 script:
-  - find ~/.nvm
+  - true
 
 # env:
 #   - DIST=precise STACK=EC2
