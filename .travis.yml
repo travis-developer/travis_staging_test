@@ -1,10 +1,7 @@
-language: node_js
+language: scala
 
 sudo: false
 
-node_js:
-  - node
-  - 6
 
 install:
   - true
