@@ -1,12 +1,15 @@
-language: ruby
+language: dart
 
 sudo: false
 
-install:
-  - true
+dart:
+  - stable
+  - dev
+dart_task:
+- test: --platform chrome
 
 script:
-  - travis_wait 5 "curl https://google.com; sleep 330"
+  - pub run test --platform chrome
 
 # env:
 #   - DIST=precise STACK=EC2
