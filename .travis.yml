@@ -2,6 +2,8 @@ language: dart
 
 sudo: false
 
+dart_task:
+  - test
 # env:
 #   - DIST=precise STACK=EC2
 
