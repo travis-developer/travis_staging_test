@@ -1,9 +1,13 @@
-language: dart
+language: ruby
 
 sudo: false
 
-dart_task:
-  - test
+install:
+  - true
+
+script:
+  - travis_wait 15 sleep 30
+
 # env:
 #   - DIST=precise STACK=EC2
 
