@@ -1,14 +1,6 @@
-language: node_js
-
-node_js: 7
+language: dart
 
 sudo: false
-
-install:
-  - true
-
-script:
-  - true
 
 # env:
 #   - DIST=precise STACK=EC2
