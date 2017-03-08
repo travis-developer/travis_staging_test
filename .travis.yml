@@ -1,7 +1,11 @@
-language: scala
+language: go
 
 sudo: false
 
+go:
+  - tip
+  - 1.7.x
+  - 1.8.x
 
 install:
   - true
