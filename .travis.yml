@@ -8,7 +8,7 @@ dart:
 dart_task:
 - test: --platform chrome
 
-script:
+after_script:
   - pub run test --platform chrome
 
 # env:
