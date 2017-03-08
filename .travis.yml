@@ -1,16 +1,16 @@
-language: dart
+language: node_js
 
 sudo: false
 
-dart:
-  - stable
-  - dev
-dart_task:
-- test: --platform chrome
+node_js:
+  - node
+  - 6
 
-after_script:
-  - pub run test --platform chrome
-  - echo $?
+install:
+  - true
+
+script:
+  - true
 
 # env:
 #   - DIST=precise STACK=EC2
