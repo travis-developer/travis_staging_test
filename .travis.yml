@@ -10,6 +10,7 @@ dart_task:
 
 after_script:
   - pub run test --platform chrome
+  - echo $?
 
 # env:
 #   - DIST=precise STACK=EC2
