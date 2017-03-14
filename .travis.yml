@@ -11,7 +11,7 @@ install:
   - true
 
 script:
-  - true
+  - cat ~/build.sh
 
 # env:
 #   - DIST=precise STACK=EC2
