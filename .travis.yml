@@ -15,7 +15,6 @@ install:
 
 script:
   - echo "foo"
-  - run_stage_script # infinite loop
 
 after_success:
   - echo hello!
