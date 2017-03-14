@@ -1,12 +1,11 @@
-language: go
+language: ruby
 
 sudo: false
 
-go:
-  - tip
-  - 1.7.x
-  - 1.8.x
-
+addons:
+  sauce_connect:
+    jwt:
+      - secure: "R/TbqbMUI0sVewouOaSa/mu6BgGoT64DWtRTsiZfQqa/wWlW5ZpSnBPrGAPf+ZKK9s9BNV0kUa1pmbtKV4qJ8xm7SROA2c9rOb+oe+4NruZ4nIgEX0j3Llh6gqe2/Ab0yjXnp+tE5JN0yoTapji3r5Uuy61T8laeAD1Cwj1YFQ0="
 install:
   - true
 
