@@ -1,8 +1,6 @@
-language: node_js
+language: ruby
 
 sudo: false
-
-node_js: '7'
 
 # addons:
 #   sauce_connect:
@@ -12,6 +10,8 @@ node_js: '7'
 #   jwt:
 #     - secure: "Nn3QiQtVc3KK9jAhpHdDt0JJ1fok/g5OrbWXoU1IV8MWt6xrvbeRonlAPZ3eMgizs2XULhCha+yGHitgQ3jzEAKvDSihZ9CPHpwgcnvETbzunowQtigQxamLGeKl0nvFNrNssBMOE+/oDd4vpiOA43nu1gr5rPPZzTgVumaHrW4="
 
+addons:
+  artifacts: true
 
 script:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
