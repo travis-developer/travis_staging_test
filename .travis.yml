@@ -1,9 +1,8 @@
-language: go
+language: node_js
 
 sudo: false
 
-go:
-  - '1.4'
+node_js: '7'
 
 # addons:
 #   sauce_connect:
