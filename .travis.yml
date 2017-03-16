@@ -14,7 +14,7 @@ node_js: '7'
 
 
 script:
-  - echo "foo"
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
 
 after_success:
   - echo hello!
