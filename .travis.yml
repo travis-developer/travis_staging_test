@@ -2,8 +2,12 @@ language: rust
 
 sudo: false
 
-env:
-  - secure: "pbMSC0ocSdqakgdZp/wMRH8QryEu2FrTAYFHUX657406tS1F+cCUl7VPmanvbwVagJwmqeCEs0LTJn2gEVSG2WBo64vJMtYrIwOrkLbRxmJ50dy0vUmS7Toop160nBdVtnRdxaEMicyxL6zyr85y4sti0nICcEChE9z1oVqMKlA="
+install: true
+
+script: true
+
+# env:
+#   - secure: "pbMSC0ocSdqakgdZp/wMRH8QryEu2FrTAYFHUX657406tS1F+cCUl7VPmanvbwVagJwmqeCEs0LTJn2gEVSG2WBo64vJMtYrIwOrkLbRxmJ50dy0vUmS7Toop160nBdVtnRdxaEMicyxL6zyr85y4sti0nICcEChE9z1oVqMKlA="
 # addons:
 #   sauce_connect:
 #     username: foobar12345677
