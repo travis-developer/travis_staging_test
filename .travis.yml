@@ -2,6 +2,6 @@ language: generic
 dist: trusty
 sudo: false
 install: true
-script: bitcoind
+script: true
 notifications:
     email: false
