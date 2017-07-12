@@ -1,9 +1,9 @@
-
+filter_secrets: false
 language: bash
 sudo: false
 dist: trusty
 before_install:
-    - set -x
+#    - set -x
     - set -e
     - "false"
 install:
