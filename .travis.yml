@@ -11,9 +11,9 @@ matrix:
           dist: trusty
           sudo: required
 script:
-    - echo a line to stdout 
-    - echo a line to stderr >&2
+    - echo $c_space_d_quoted to stdout
+    - echo $c_space_d_quoted to stderr >&2
     - ps -jef --forest
-    - ls -l /dev/fd
+    - ls -lL /dev/fd
 notifications:
     email: never
