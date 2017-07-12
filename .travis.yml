@@ -6,7 +6,7 @@ before_install:
     - set -e
     - "false"
 install:
-    - echo new run
+    - echo after extra sync
 script:
     - ps -jef --forest
 notifications:
