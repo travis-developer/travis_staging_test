@@ -3,9 +3,9 @@ language: bash
 sudo: false
 dist: trusty
 before_install:
-#    - set -x
+    - set -x
     - set -e
-    - "false"
+    - ls doesnotexist
 install:
     - echo after extra sync
 script:
