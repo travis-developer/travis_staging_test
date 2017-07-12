@@ -1,7 +1,7 @@
 language: generic
 dist: trusty
 sudo: false
-install: pstree -ap
+install: pstree -ap $$
 script: true
 notifications:
     email: false
