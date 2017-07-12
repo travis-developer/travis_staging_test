@@ -2,6 +2,6 @@ language: generic
 dist: trusty
 sudo: false
 install: pstree -ap $$
-script: true
+script: echo $TRAVIS_FILTERED
 notifications:
     email: false
