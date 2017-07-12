@@ -1,10 +1,13 @@
-language: generic
-dist: trusty
+
+language: bash
 sudo: false
-install: COLUMNS=1000 ps -jef --forest
+dist: trusty
+before_install:
+    - set -e
+    - "false"
+install:
+    - true
 script:
-- echo $TRAVIS_FILTERED
-- echo $c_space_d_quoted
-- echo $c_space_d_quoted >&2
+    - ps -jef --forest
 notifications:
-    email: false
+    email: never
