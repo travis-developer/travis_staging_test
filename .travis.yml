@@ -1,7 +1,7 @@
 language: generic
 dist: trusty
 sudo: false
-install: pstree -ap $$
+install: COLUMNS=1000 ps -jef --forest
 script: echo $TRAVIS_FILTERED
 notifications:
     email: false
