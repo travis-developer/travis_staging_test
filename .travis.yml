@@ -6,7 +6,7 @@ before_install:
     - set -e
     - "false"
 install:
-    - true
+    - echo new run
 script:
     - ps -jef --forest
 notifications:
