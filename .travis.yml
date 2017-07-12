@@ -2,6 +2,9 @@ language: generic
 dist: trusty
 sudo: false
 install: COLUMNS=1000 ps -jef --forest
-script: echo $TRAVIS_FILTERED
+script:
+- echo $TRAVIS_FILTERED
+- echo $c_space_d_quoted
+- echo $c_space_d_quoted >&2
 notifications:
     email: false
