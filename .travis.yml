@@ -13,7 +13,7 @@ matrix:
 script:
     - echo $c_space_d_quoted to stdout
     - echo $c_space_d_quoted to stderr >&2
-    - ps -jef --forest || true
+    - ps -jef --forest 2>/dev/null || ps -jef
     - ls -lL /dev/fd
 notifications:
     email: never
