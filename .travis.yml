@@ -1,24 +1,31 @@
 language: bash
 matrix:
     include:
-        - env: test=ssh-agent filter=true image=container-trusty
+        - env: filter=true image=sudo-trusty
+          sudo: required
+          dist: trusty
+        - env: filter=false image=sudo-trusty
+          sudo: required
+          dist: trusty
+          filter_secrets: false
+        - env: filter=true image=container-trusty
           sudo: false
           dist: trusty
-          install: eval `ssh-agent -s`
         - env: filter=false image=container-trusty
           sudo: false
           dist: trusty
           filter_secrets: false
-          install: eval `ssh-agent -s`
-        - env: test=sleep filter=true image=container-trusty
-          sudo: false
-          dist: trusty
-          install: "setsid sh -c 'sleep 1000' &"
-        - env: test=sleep filter=false image=container-trusty
-          sudo: false
-          dist: trusty
+        - env: filter=true image=xcode6.4
+          os: osx
+          osx_image: xcode6.4
+        - env: filter=false image=xcode6.4
+          os: osx
+          osx_image: xcode6.4
           filter_secrets: false
-          install: "setsid sh -c 'sleep 1000' &"
+
+install:
+    - eval `ssh-agent -s`
+    - "setsid sh -c 'sleep 1000' &"
 script:
     - sleep 1
     - declare -f travis_terminate
