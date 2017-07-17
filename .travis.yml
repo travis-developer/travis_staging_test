@@ -22,6 +22,7 @@ matrix:
 
 script:
     - sleep 1
+    - declare -f travis_terminate
     - echo $$
     - ps -jef --forest 2>/dev/null || ps -jef
 notifications:
