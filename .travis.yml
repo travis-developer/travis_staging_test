@@ -1,19 +1,29 @@
-language: minimal
+language: bash
 matrix:
     include:
-        - env: test=osx
-          os: osx
-          osx_image: xcode7.3
-        - env: test=container
-          dist: trusty
+        - env: test=ssh-agent filter=true image=container-trusty
           sudo: false
-        - env: test=sudo-nofilter
           dist: trusty
-          sudo: required
+          install: eval `ssh-agent -s`
+        - env: filter=false image=container-trusty
+          sudo: false
+          dist: trusty
+          filter_secrets: false
+          install: eval `ssh-agent -s`
+        - env: test=sleep filter=true image=container-trusty
+          sudo: false
+          dist: trusty
+          install: "setsid sh -c 'sleep 1000' &"
+        - env: test=sleep filter=false image=container-trusty
+          sudo: false
+          dist: trusty
+          filter_secrets: false
+          install: "setsid sh -c 'sleep 1000' &"
+
 script:
-    - echo $c_space_d_quoted to stdout
-    - echo $c_space_d_quoted to stderr >&2
+    - sleep 1
+    - echo $$
     - ps -jef --forest 2>/dev/null || ps -jef
-    - ls -lL /dev/fd
+    - kill -9 $(awk -v pid=$$ '$1!=pid' <(ps --no-headers --user $USER -opid:1))
 notifications:
     email: never
