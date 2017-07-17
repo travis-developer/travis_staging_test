@@ -19,7 +19,6 @@ matrix:
           dist: trusty
           filter_secrets: false
           install: "setsid sh -c 'sleep 1000' &"
-
 script:
     - sleep 1
     - declare -f travis_terminate
