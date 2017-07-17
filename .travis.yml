@@ -24,6 +24,5 @@ script:
     - sleep 1
     - echo $$
     - ps -jef --forest 2>/dev/null || ps -jef
-    - kill -9 $(awk -v pid=$$ '$1!=pid' <(ps --no-headers --user $USER -opid:1))
 notifications:
     email: never
