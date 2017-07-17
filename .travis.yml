@@ -9,7 +9,7 @@ install:
     - "setsid sh -c 'sleep 1000' &"
     - export COLUMNS=1000
 script:
-    - sleep 1
+    - sleep 100
     - echo $TRAVIS_FILTERED
     - ls -l /.dockerenv || true
     - declare -f travis_terminate
