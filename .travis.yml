@@ -4,24 +4,12 @@ matrix:
         - env: filter=true image=sudo-trusty
           sudo: required
           dist: trusty
-        - env: filter=false image=sudo-trusty
-          sudo: required
-          dist: trusty
-          filter_secrets: false
         - env: filter=true image=container-trusty
           sudo: false
           dist: trusty
-        - env: filter=false image=container-trusty
-          sudo: false
-          dist: trusty
-          filter_secrets: false
         - env: filter=true image=xcode6.4
           os: osx
           osx_image: xcode6.4
-        - env: filter=false image=xcode6.4
-          os: osx
-          osx_image: xcode6.4
-          filter_secrets: false
 install:
     - eval `ssh-agent -s`
     - "setsid sh -c 'sleep 1000' &"
