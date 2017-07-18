@@ -36,8 +36,14 @@ script:
     - '[[ "$TRAVIS_FILTERED" = redirect_io && -e /dev/fd/9 ]] && sync && command exec 1>&9 2>&9 9>&- && sync'
     - pgrep -u $USER | grep -v -w $$ > $TRAVIS_TMPDIR/pids_after
     - ls -l /proc/self/fd
+    - ps $(pgrep -P $$)
+    - sleep 3
+    - ps $(pgrep -P $$)
+    - kill $(ps aux | awk '/SECRET_0/{print $2}')
+    - sleep 3
+    - ps $(pgrep -P $$)
     - "awk 'NR==FNR{a[$1]++;next};!($1 in a)' $TRAVIS_TMPDIR/pids_{before,after}"
     - "ps $(awk 'NR==FNR{a[$1]++;next};!($1 in a)' $TRAVIS_TMPDIR/pids_{before,after})"
-
+    - ps -jef --forest --cols 1000 2>/dev/null || ps -jef --cols 1000 || ps -jef --columns 1000 || ps -jef
 notifications:
     email: never
