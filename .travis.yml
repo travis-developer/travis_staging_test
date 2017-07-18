@@ -26,7 +26,6 @@ install:
     - eval `ssh-agent -s`
     - "setsid sh -c 'sleep 1000' &"
 script:
-    - sleep 100
     - echo $TRAVIS_FILTERED
     - ls -l /.dockerenv || true
     - declare -f travis_terminate
