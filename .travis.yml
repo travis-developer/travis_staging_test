@@ -1,16 +1,16 @@
 language: bash
 matrix:
     include:
-        - env: filter=true image=sudo-trusty
-          sudo: required
-          dist: trusty
+        #- env: filter=true image=sudo-trusty
+        #  sudo: required
+        #  dist: trusty
         #- env: filter=false image=sudo-trusty
         #  sudo: required
         #  dist: trusty
         #  filter_secrets: false
-        #- env: filter=true image=container-trusty
-        #  sudo: false
-        #  dist: trusty
+        - env: filter=true image=container-trusty
+          sudo: false
+          dist: trusty
         #- env: filter=false image=container-trusty
         #  sudo: false
         #  dist: trusty
