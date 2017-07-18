@@ -4,24 +4,24 @@ matrix:
         - env: filter=true image=sudo-trusty
           sudo: required
           dist: trusty
-        - env: filter=false image=sudo-trusty
-          sudo: required
-          dist: trusty
-          filter_secrets: false
-        - env: filter=true image=container-trusty
-          sudo: false
-          dist: trusty
-        - env: filter=false image=container-trusty
-          sudo: false
-          dist: trusty
-          filter_secrets: false
-        - env: filter=true image=xcode6.4
-          os: osx
-          osx_image: xcode6.4
-        - env: filter=false image=xcode6.4
-          os: osx
-          osx_image: xcode6.4
-          filter_secrets: false
+        #- env: filter=false image=sudo-trusty
+        #  sudo: required
+        #  dist: trusty
+        #  filter_secrets: false
+        #- env: filter=true image=container-trusty
+        #  sudo: false
+        #  dist: trusty
+        #- env: filter=false image=container-trusty
+        #  sudo: false
+        #  dist: trusty
+        #  filter_secrets: false
+        #- env: filter=true image=xcode6.4
+        #  os: osx
+        #  osx_image: xcode6.4
+        #- env: filter=false image=xcode6.4
+        #  os: osx
+        #  osx_image: xcode6.4
+        #  filter_secrets: false
 install:
     - eval `ssh-agent -s`
     - "setsid sh -c 'sleep 1000' &"
@@ -32,5 +32,11 @@ script:
     - declare -f travis_terminate
     - echo $$
     - ps -jef --forest --cols 1000 2>/dev/null || ps -jef --cols 1000 || ps -jef --columns 1000 || ps -jef
+    - pgrep -u $USER | grep -v -w $$ > $TRAVIS_TMPDIR/pids_after
+    -  [[ "$TRAVIS_FILTERED" = redirect_io && -e /dev/fd/9 ]] && sync && command exec 1>&9 2>&9 9>&- && sync
+    - awk 'NR==FNR{a[$1]++;next};!($1 in a)' $TRAVIS_TMPDIR/pids_{before,after}
+    - ps $(awk 'NR==FNR{a[$1]++;next};!($1 in a)' $TRAVIS_TMPDIR/pids_{before,after})
+
+
 notifications:
     email: never
