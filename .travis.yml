@@ -1,23 +1,14 @@
-language: bash
-matrix:
-    include:
-        - env: filter=true image=sudo-trusty
-          sudo: required
-          dist: trusty
-        - env: filter=true image=container-trusty
-          sudo: false
-          dist: trusty
-        - env: filter=true image=xcode6.4
-          os: osx
-          osx_image: xcode6.4
+language: python
+sudo: required
+dist: trusty
 install:
-    - eval `ssh-agent -s`
-    - "setsid sh -c 'sleep 1000' &"
-script:
-    - echo $TRAVIS_FILTERED
-    - ls -l /.dockerenv || true
-    - declare -f travis_terminate
-    - echo $$
-    - ps -jef --forest --cols 1000 2>/dev/null || ps -jef --cols 1000 || ps -jef --columns 1000 || ps -jef
+    - |
+        travis_mysql_ping() {
+             local i
+             until (( i++ > 10 )) || mysql <<<'select 1;'; do sleep 1; done
+        }
+    - sudo service mysql stop
+    - travis_mysql_ping &
+script: sudo service mysql start
 notifications:
     email: never
