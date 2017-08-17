@@ -3,9 +3,9 @@ sudo: false
 dist: trusty
 install:
     - echo set -e >>file.sh
-    - echo about to execute false >>file.sh
+    - echo echo about to execute false >>file.sh
     - echo false >>file.sh
-    - echo executed false >>file.sh
+    - echo echo executed false >>file.sh
 script:
     - source file.sh
 notifications:
