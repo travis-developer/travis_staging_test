@@ -2,11 +2,9 @@ language: ruby
 sudo: false
 dist: trusty
 install:
-    - echo set -e >>file.sh
-    - echo echo about to execute false >>file.sh
-    - echo false >>file.sh
-    - echo echo executed false >>file.sh
+    - df -h /dev/shm
+    - df -h
 script:
-    - source file.sh
+    - df -BM /dev/shm | awk -F'M? +' 'NR>1{if ($2<128)exit 1;exit 0}'
 notifications:
     email: never
