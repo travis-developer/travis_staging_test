@@ -3,7 +3,6 @@ sudo: false
 dist: trusty
 install:
     - df -h /dev/shm
-    - df -h
 script:
     - df -BM /dev/shm | awk -F'M? +' 'NR>1{if ($2<128)exit 1;exit 0}'
 notifications:
