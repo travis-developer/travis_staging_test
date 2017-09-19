@@ -1,4 +1,4 @@
-language: ruby
+language: __sugilite__
 sudo: false
 dist: trusty
 env:
@@ -18,6 +18,41 @@ env:
         - run=13
         - run=14
         - run=15
+        - run=16
+        - run=17
+        - run=18
+        - run=19
+        - run=20
+        - run=21
+        - run=22
+        - run=23
+        - run=24
+        - run=25
+        - run=26
+        - run=27
+        - run=28
+        - run=29
+        - run=30
+        - run=31
+        - run=32
+        - run=33
+        - run=34
+        - run=35
+        - run=36
+        - run=37
+        - run=38
+        - run=39
+        - run=40
+        - run=41
+        - run=42
+        - run=43
+        - run=44
+        - run=45
+        - run=46
+        - run=47
+        - run=48
+        - run=49
+        - run=50
 install: true
 script: true
 notifications:
