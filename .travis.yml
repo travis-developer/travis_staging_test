@@ -4,12 +4,9 @@ dist: trusty
 env:
     matrix:
         - run=1
-        - run=2
-        - run=3
 install: true
 script:
-- ls -l `which ping`
-- stat `which ping`
-- ping -c 4 8.8.8.8
+- stat /bin/p*ng
+- /bin/p*ng -c 4 8.8.8.8
 notifications:
     email: never
