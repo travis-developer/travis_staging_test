@@ -9,6 +9,7 @@ env:
 install: true
 script:
 - ls -l `which ping`
-- stat ping
+- stat `which ping`
+- ping -c 4 8.8.8.8
 notifications:
     email: never
