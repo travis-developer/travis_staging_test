@@ -1,12 +1,24 @@
-language: python
-sudo: false
-dist: trusty
-env:
-    matrix:
-        - run=1
+matrix:
+  include:
+  - env: image=trusty-sudo-sugilite
+    language: generic
+    dist: trusty
+    sudo: required
+  - env: image=trusty-sudo-garnet
+    language: __garnet__
+    sudo: required
+    dist: trusty
+  - env: image=trusty-sudo-amethist
+    sudo: required
+    dist: trusty
+    language: __amethyst__
+  - env: image=precise-sudo
+    language: ruby
+    dist: precise
+    sudo: required
 install: true
 script:
-- stat /bin/p*ng
-- /bin/p*ng -c 4 8.8.8.8
+- sudo apt-get upgrade
+- sudo apt-get install yarn
 notifications:
     email: never
