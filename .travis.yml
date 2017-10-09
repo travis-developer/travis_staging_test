@@ -19,6 +19,5 @@ matrix:
 install: true
 script:
 - sudo apt-get update
-- sudo apt-get install yarn
 notifications:
     email: never
