@@ -1,23 +1,25 @@
-matrix:
-  include:
-  - env: image=trusty-sudo-sugilite
-    language: generic
-    dist: trusty
-    sudo: required
-  - env: image=trusty-sudo-garnet
-    language: __garnet__
-    sudo: required
-    dist: trusty
-  - env: image=trusty-sudo-amethist
-    sudo: required
-    dist: trusty
-    language: __amethyst__
-  - env: image=precise-sudo
-    language: ruby
-    dist: precise
-    sudo: required
+language: csharp
+sudo: required
+dist: trusty
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - libstdc++-4.9-dev
+      - libunwind8-dev
+
+before_install:
+  # Yarn
+  - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+  - echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+  - sudo apt-get update && sudo apt-get install yarn
+
+cache:
+  directories:
+  - $HOME/.yarn-cache
 install: true
-script:
-- sudo apt-get update
+script: true
 notifications:
-    email: never
+  email: never
