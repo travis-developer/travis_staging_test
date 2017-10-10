@@ -1,10 +1,17 @@
-language: swift
+language: csharp
 os: osx
-osx_image: xcode9.1
-notifications:
-    email: false
-install:
-- rvm use 2.3.5 --install --binary --fuzzy
-- rvm use $(travis_internal_ruby)
+matrix:
+  include:
+  - osx_image: xcode9.1
+  - osx_image: xcode8.2
+  - osx_image: xcode8.1
+  - osx_image: xcode8
+  - osx_image: xcode7.3
+  - osx_image: xcode6.4
+
+install: true
 script:
-- brew update
+  - brew --version
+  - brew install moreutils
+  - brew update
+  - brew install gawk
