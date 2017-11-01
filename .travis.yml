@@ -1,17 +1,6 @@
-language: csharp
-os: osx
-matrix:
-  include:
-  - osx_image: xcode9.1
-  - osx_image: xcode8.2
-  - osx_image: xcode8.1
-  - osx_image: xcode8
-  - osx_image: xcode7.3
-  - osx_image: xcode6.4
-
+language: php
+php: nightly
 install: true
-script:
-  - brew --version
-  - brew install moreutils
-  - brew update
-  - brew install gawk
+script: true
+notifications:
+  email: never
