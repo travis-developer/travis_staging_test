@@ -1,6 +1,6 @@
 language: php
 php: nightly
 install: true
-script: true
+script: echo true
 notifications:
   email: never
