@@ -1,6 +1,6 @@
-language: php
-php: randomstring
-install: true
-script: echo true
+language: minimal
+install: python ipv6-server.py &
+before_script: sleep 1
+script: curl -I :::8080
 notifications:
   email: never
