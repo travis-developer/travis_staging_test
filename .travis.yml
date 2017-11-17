@@ -1,9 +1,5 @@
-language: minimal
-install: python ipv6-server.py &
-before_script: sleep 1
-script: curl -I :::8080
-after_script:
-    - head -n 1000 /etc/hosts*
-    - netstat --listening -6
+language: generic
+install: sudo apt-get install -y hhvm
+script: true
 notifications:
   email: never
