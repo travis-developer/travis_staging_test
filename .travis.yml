@@ -1,4 +1,12 @@
 language: generic
+matrix:
+  include:
+  - env: dist=old
+    dist: precise
+    sudo: required
+  - env: dist-new
+    dist: trusty
+    sudo: required
 install: sudo apt-get install -y hhvm
 script: true
 notifications:
