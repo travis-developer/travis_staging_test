@@ -7,7 +7,7 @@ matrix:
   - env: dist-new
     dist: trusty
     sudo: required
-install: sudo apt-get install -y hhvm
-script: true
+install: sudo apt-get update
+script: "sudo apt-get install hhvm -y || true"
 notifications:
   email: never
