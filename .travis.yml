@@ -1,4 +1,5 @@
-language: ruby
+language: php
+php: hhvm
 matrix:
   include:
   - env: dist=old
