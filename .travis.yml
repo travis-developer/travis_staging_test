@@ -1,14 +1,14 @@
-language: php
-php: hhvm-nightly
+language: ruby
+sudo: required
 matrix:
   include:
-  - env: dist=old
+  - env: dist=precise
     dist: precise
-    sudo: required
-  - env: dist-new
+  - env: dist=trusty
     dist: trusty
-    sudo: required
+  - env: dist=xenial
+    dist: xenial
 install: sudo apt-get update
-script: "sudo apt-get install hhvm -y || true"
+script: echo true
 notifications:
   email: never
