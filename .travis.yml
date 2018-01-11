@@ -17,6 +17,6 @@ matrix:
           osx_image: xcode8.3
         - env: fix=no-osx
           osx_image: xcode8.3
-install: true
+install: cat ~/nonblock.py
 notifications:
     email: never
