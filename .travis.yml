@@ -1,14 +1,22 @@
 language: ruby
-sudo: required
+script: awk 'BEGIN{for(i=1;i<=3000;i++)a=a"\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";print a; print a >"/dev/stderr"}'
 matrix:
-  include:
-  - env: dist=precise
-    dist: precise
-  - env: dist=trusty
-    dist: trusty
-  - env: dist=xenial
-    dist: xenial
-install: sudo apt-get update
-script: echo true
+    include:
+        - env: fix=yes-ec2
+          before_install: python nonblock.py
+          sudo: false
+        - env: fix=no-ec2
+          sudo: false
+        - env: fix=yes-gce
+          before_install: python nonblock.py
+          sudo: required
+        - env: fix=no-gce
+          sudo: required
+        - env: fix=yes-osx
+          before_install: python nonblock.py
+          osx_image: xcode8.3
+        - env: fix=no-osx
+          osx_image: xcode8.3
+install: true
 notifications:
-  email: never
+    email: never
