@@ -3,7 +3,7 @@ addons:
   apt:
     packages:
     - moreutils
-script: true
+script: sudo apt-get update
 matrix:
     include:
         - env: fix=no-ec2
