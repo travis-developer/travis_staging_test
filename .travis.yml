@@ -1,17 +1,18 @@
 language: ruby
-script: awk 'BEGIN{for(i=1;i<=3000;i++)a=a"\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";print a; print a >"/dev/stderr"}'
+addons:
+  apt:
+    packages:
+    - moreutils
+script: true
 matrix:
     include:
         - env: fix=no-ec2
           sudo: false
-        - env: fix=extra-ec2
-          sudo: false
-          before_install: python ~/nonblock.py
-        #- env: fix=no-gce
-        #  sudo: required
-        #- env: fix=no-osx
-        #  osx_image: xcode8.3
-install:
-- cat ~/nonblock.py
+        - env: fix=no-gce
+          sudo: required
+        - env: fix=no-gce
+          sudo: required
+          group: deprecated-2017Q4
+install: true
 notifications:
     email: never
