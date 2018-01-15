@@ -2,18 +2,29 @@ language: ruby
 script: awk 'BEGIN{for(i=1;i<=3000;i++)a=a"\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";print a; print a >"/dev/stderr"}'
 matrix:
     include:
-        - env: image=ec2
+        - env: image=ec2 run=1
           sudo: false
-        - env: image=gce
+        - env: image=gce run=1
           sudo: required
-        - env: fix=no-osx
+        - env: fix=no-osx run=1
           osx_image: xcode8.3
-env:
-- run=1
-- run=2
-- run=3
-- run=4
-- run=5
+
+
+        - env: image=ec2 run=2
+          sudo: false
+        - env: image=gce run=2
+          sudo: required
+        - env: fix=no-osx run=2
+          osx_image: xcode8.3
+
+
+        - env: image=ec2 run=3
+          sudo: false
+        - env: image=gce run=3
+          sudo: required
+        - env: fix=no-osx run=3
+          osx_image: xcode8.3
+
 
 install: true
 notifications:
