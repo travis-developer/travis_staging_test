@@ -2,16 +2,19 @@ language: ruby
 script: awk 'BEGIN{for(i=1;i<=3000;i++)a=a"\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";print a; print a >"/dev/stderr"}'
 matrix:
     include:
-        - env: fix=no-ec2
+        - env: image=ec2
           sudo: false
-        - env: fix=extra-ec2
-          sudo: false
-          before_install: python ~/nonblock.py
-        #- env: fix=no-gce
-        #  sudo: required
-        #- env: fix=no-osx
-        #  osx_image: xcode8.3
-install:
-- cat ~/build.sh
+        - env: image=gce
+          sudo: required
+        - env: fix=no-osx
+          osx_image: xcode8.3
+env:
+- run=1
+- run=2
+- run=3
+- run=4
+- run=5
+
+install: true
 notifications:
     email: never
