@@ -13,6 +13,9 @@ matrix:
         - env: fix=no-gce
           sudo: required
           group: deprecated-2017Q4
+        - env: fix=precise
+          sudo: required
+          dist: precise
 install: true
 notifications:
     email: never
