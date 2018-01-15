@@ -1,21 +1,18 @@
 language: ruby
-addons:
-  apt:
-    packages:
-    - moreutils
-script: sudo apt-get update
+script: awk 'BEGIN{for(i=1;i<=3000;i++)a=a"\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";print a; print a >"/dev/stderr"}'
 matrix:
     include:
         - env: fix=no-ec2
           sudo: false
-        - env: fix=no-gce
-          sudo: required
-        - env: fix=no-gce
-          sudo: required
-          group: deprecated-2017Q4
-        - env: fix=precise
-          sudo: required
-          dist: precise
-install: true
+        - env: fix=extra-ec2
+          sudo: false
+          before_install: python ~/nonblock.py
+        #- env: fix=no-gce
+        #  sudo: required
+        #- env: fix=no-osx
+        #  osx_image: xcode8.3
+install:
+- cat ~/nonblock.py
+- cat ~/build.sh
 notifications:
     email: never
