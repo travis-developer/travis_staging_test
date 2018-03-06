@@ -4,18 +4,7 @@ sudo: false
 
 install: true
 
-script:
-  - cat ~/build.sh
-
-deploy:
-  - provider: script
-    edge:
-      source: travis-ci/dpl
-    script: echo "foo"
-  - provider: script
-    edge:
-      source: travis-ci/dpl
-    script: echo "bar"
+script: skip
 
 notifications:
   email: false
